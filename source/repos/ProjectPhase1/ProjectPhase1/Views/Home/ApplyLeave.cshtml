@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "ApplyLeave";
+    Layout = "~/Views/Shared/_layoutView.cshtml";
+}
+
+
+<form action="ApplyLeave" method="post" class="row g-3 needs-validation" novalidate style="margin:20px">
+    <h2>Leave Application</h2>
+    <div class="col-md-4 position-relative">
+        <label for="validationTooltip01" class="form-label">Date (Ex- 30/12/2022)</label>
+        <input type="date" class="form-control" id="validationTooltip01" placeholder="DD/MM/YYYY" value="" required>
+        <label for="validationTooltip01" class="form-label">LeaveID</label>
+        <input type="text" class="form-control" id="validationTooltip01" placeholder="" value="" name="LeaveID" required>
+        <div class="valid-tooltip">
+            Looks good!
+        </div>
+
+    </div>
+    <div class="input-group">
+        <span class="input-group-text">Reason for leave</span>
+        <textarea class="form-control" aria-label="With textarea" name="LeaveText"></textarea>
+    </div>
+    
+    <div class="col-md-3 position-relative">
+        <label for="validationTooltip04" class="form-label">Leave Type</label>
+        
+        <select class="form-select" aria-label="Default select example" name="DepartmentName">
+            <option selected>Please select</option>
+            <option value="1">Medical Leave</option>
+            <option value="2">Emergency Leave</option>
+            <option value="3">Annual leave</option>
+        </select>
+        
+    </div>
+   
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+</form>
+

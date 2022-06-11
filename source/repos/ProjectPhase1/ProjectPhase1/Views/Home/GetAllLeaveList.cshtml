@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "GetAllLeaveList";
+    Layout = "~/Views/Shared/_layoutView.cshtml";
+
+}
+@model List<ProjectPhase1.Models.LeaveList>
+<h2>GetAllLeaveList</h2>
+
+<table class="table table-dark" >
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Remove</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th scope="row">@item.LeaveID</th>
+            <td scope="row">@item.LeaveText</td>
+            <td scope="row"><a href="/home/DeleteLeaveList/@item.LeaveID">Delete</a></td>
+            <td scope="row"><a href="/home/UpdateLeaveList/@item.LeaveID">update</a></td>
+        </tr>
+        }
+       
+    </tbody>
+</table>
+

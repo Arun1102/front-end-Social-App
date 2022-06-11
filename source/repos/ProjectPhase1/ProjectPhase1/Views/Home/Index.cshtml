@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    @* Layout = "~/Views/Shared/_layoutView.cshtml";*@
+    @model List<ProjectPhase1.Models.Dashboard>
+}
+
+
+<div style="display: flex; justify-content: center; margin-top: 20px; ">
+    @foreach (var item in Model)
+    {
+        <div class="card " style="width: 18rem; margin-left: 20px; ">
+            <img src="@item.imgtag" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@item.title</h5>
+                <p class="card-text">@item.description</p>
+            </div>
+            <div class="card-body">
+                <a href="@item.anchortag" class="card-link">Click Here</a>
+            </div>
+        </div>
+    }
+</div>
