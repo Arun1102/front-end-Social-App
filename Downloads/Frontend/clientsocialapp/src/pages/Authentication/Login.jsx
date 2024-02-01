@@ -1,5 +1,5 @@
 import { TextField,Button} from '@mui/material';
-import { ErrorMessage, Formik,Field,Form } from 'formik'
+import { ErrorMessage, Formik,Field,Form ,resetForm} from 'formik'
 import React, { useState } from 'react'
 import * as Yup from "yup"
 
@@ -18,8 +18,9 @@ function Login() {
 
     const[formValue,setFormValue] = useState();
 
-    const handleSubmit = (values)=>{
+    const handleSubmit = (values,{resetForm})=>{
         console.log("handle submitted",values)
+        resetForm();
     }
 
   return (
@@ -54,7 +55,7 @@ function Login() {
                     <ErrorMessage name="password" component="div" className='text-red-500'/>
                 </div>
             </div>
-            <Button sx={{paading: ".8rem 0rem"}} fullWidth type='submit' variant='contained' color="primary">Login</Button>
+            <Button sx={{padding: ".8rem 0rem"}} fullWidth type='submit' variant='contained' color="primary">Login</Button>
 
         </Form>
         

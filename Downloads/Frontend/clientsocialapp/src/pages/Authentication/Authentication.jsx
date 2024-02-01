@@ -1,6 +1,7 @@
 import React from 'react'
 import {Grid,Card} from '@mui/material'
 import Login from './Login'
+import Register from './Register'
 
 function Authentication() {
   return (
@@ -19,7 +20,7 @@ function Authentication() {
                         </div>
 
                         <Login/>
-                       
+                        {/* <Register/> */}
 
                     </Card>
                 </div>
