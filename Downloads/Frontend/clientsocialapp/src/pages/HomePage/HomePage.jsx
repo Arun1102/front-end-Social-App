@@ -1,11 +1,12 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import Sidebar from '../../Component/SideBar'
+import Sidebar from '../../Component/Sidebar/SideBar'
 import { Route, useLocation,Routes } from 'react-router-dom'
 import MiddlePart from '../../Component/MiddlePart/MiddlePart'
 import CreateReelsForm from '../../Component/Reels/CreateReelsForm'
 import Reels from '../../Component/Reels/Reels'
 import Profile from '../Profile/Profile'
+import HomeRight from '../../Component/HomeRight/HomeRight'
 
 function HomePage() {
 
@@ -22,8 +23,8 @@ function HomePage() {
               </div>
           </Grid>
 
-          <Grid item className='px-5 flex justify-center' xs={12} lg={location.pathname === "/"? 6 : 9}>
-
+          {/* <Grid item className='px-5 flex justify-center' xs={12} lg={location.pathname === "/"? 6 : 9}> */}
+          <Grid item className='px-5 flex justify-center' xs={12} lg={6}>
 
                 <Routes>
                   <Route path="/"  element={<MiddlePart/>}/>
@@ -33,7 +34,21 @@ function HomePage() {
                 </Routes>
 
           </Grid>
+          
+
+          <Grid item lg={3} className="relative">
+              <div className='sticky top-0 w-full'>
+                    <HomeRight/>
+              </div>
+          </Grid>
+          
+          
+
+
       </Grid>
+
+
+
 
     </div>
   )
