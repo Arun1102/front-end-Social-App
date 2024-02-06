@@ -2,6 +2,7 @@ import React from 'react'
 import {Grid,Card} from '@mui/material'
 import Login from './Login'
 import Register from './Register'
+import { Route,Routes } from 'react-router-dom'
 
 function Authentication() {
   return (
@@ -18,10 +19,10 @@ function Authentication() {
                             <h1 className='log'>Social App</h1>
                             <p className='text-center text-sm w-[70&]'>Connecting People , like never before!</p>
                         </div>
-
-                        <Login/>
-                        {/* <Register/> */}
-
+                        <Routes>
+                            <Route path="/" element={ <Login/>}/>
+                            <Route path="/register" element={<Register/>}/>
+                        </Routes>                   
                     </Card>
                 </div>
             </Grid>

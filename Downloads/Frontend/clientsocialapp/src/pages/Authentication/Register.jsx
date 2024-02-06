@@ -8,6 +8,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { useDispatch } from 'react-redux';
 import { registerUserAction } from '../../Redux/Auth/auth.action';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -28,6 +29,8 @@ function Register() {
     const[gender,setGender] = useState();
 
     const dispatch = useDispatch();
+
+    const navigate = useNavigate();
    
     
 
@@ -121,6 +124,10 @@ function Register() {
         </Form>
         
     </Formik>
+    <div className="flex gap-5 center item-center justify-center pt-5">
+        <p className='pt-1'>if you have account?</p>
+        <Button  onClick={()=>navigate("/")}>Sign In</Button>
+    </div>
 
     </>
   )
