@@ -6,7 +6,9 @@ import Card from '@mui/material/Card';
 import ImageIcon from '@mui/icons-material/Image';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import ArticleIcon from '@mui/icons-material/Article';
+import PostCard from '../Post/PostCard';
 const story = [1,1,1,1,1]
+const post = [1,1,1,1,1]
 
 
 function MiddlePart() {
@@ -68,6 +70,11 @@ function MiddlePart() {
     </div>
 
       </Card>
+
+      <div className='mt-5 sapce-y-5'>
+        
+        {post.map(()=><PostCard/>)}
+      </div>
 
     </div>
     

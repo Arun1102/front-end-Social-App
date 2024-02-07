@@ -37,7 +37,7 @@ function HomePage() {
           
 
           <Grid item lg={3} className="relative">
-              <div className='sticky top-0 w-full'>
+              <div className='sticky top-0 w-full ml-10'>
                     <HomeRight/>
               </div>
           </Grid>

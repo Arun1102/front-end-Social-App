@@ -22,7 +22,7 @@ function SideBar() {
 
 
   return (
-    <div className='card h-screen flex flex-col justify-between py-5'>
+    <div className='card h-screen flex flex-col justify-center py-5'>
       
         <div className='space-y-8 pl-5'>
 
@@ -47,7 +47,7 @@ function SideBar() {
         <div>
           <Divider/>
           <div className='pl-5 flex items-center justify-between pt-5'>
-              <div className='flex items-center space-x-3'>
+              <div className='flex items-center space-x-1'>
                   <Avatar src='https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg'/>
               
               <div>
@@ -64,7 +64,7 @@ function SideBar() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <MoreVertIcon/>
+        <MoreVertIcon className='mr-12'/>
       </Button>
       <Menu
         id="basic-menu"
