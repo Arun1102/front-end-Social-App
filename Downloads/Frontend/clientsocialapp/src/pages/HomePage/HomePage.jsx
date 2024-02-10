@@ -35,13 +35,13 @@ function HomePage() {
 
           </Grid>
           
-
+          {location.pathname === '/' &&
           <Grid item lg={3} className="relative">
               <div className='sticky top-0 w-full ml-10'>
                     <HomeRight/>
               </div>
           </Grid>
-          
+          }
           
 
 
